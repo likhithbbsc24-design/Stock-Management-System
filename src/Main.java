@@ -15,11 +15,12 @@ public class Main {
             System.out.println("0. Exit");
             System.out.print("Enter your choice: ");
             int ch = sc.nextInt();
-
+            sc.nextLine();
+            
             switch (ch) {
                 case 1:
-                    System.out.print("Enter ID: "); int id = sc.nextInt();
-                    System.out.print("Enter Name: "); String name = sc.next();
+                    System.out.print("Enter ID: "); int id = sc.nextInt(); sc.nextLine();
+                    System.out.print("Enter Name: "); String name = sc.nextLine();
                     System.out.print("Enter Quantity: "); int qty = sc.nextInt();
                     System.out.print("Enter Price: "); double price = sc.nextDouble();
                     sm.addProduct(new Product(id, name, qty, price));
@@ -33,9 +34,9 @@ public class Main {
                     sm.updateQuantity(pid, nqty);
                     break;
                 case 4:
-                    System.out.print("Enter Supplier ID: "); int sid = sc.nextInt();
-                    System.out.print("Enter Name: "); String sname = sc.next();
-                    System.out.print("Enter Contact: "); String contact = sc.next();
+                    System.out.print("Enter Supplier ID: "); int sid = sc.nextInt(); sc.nextLine();
+                    System.out.print("Enter Name: "); String sname = sc.nextLine();
+                    System.out.print("Enter Contact: "); String contact = sc.nextLine();
                     sm.addSupplier(new Supplier(sid, sname, contact));
                     break;
                 case 5:
